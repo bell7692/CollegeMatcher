@@ -1,0 +1,8 @@
+{
+  "name": "collegeMatch",
+  "app_id": "07961af3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
