@@ -1,17 +1,35 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary"> 
+    <ion-title>
+    <!-- <img style="width: 45px; height: 45px;" src = "assets/imgs/collegePennant.png" />  -->
+    <h2> - College Matcher - </h2>  
+    </ion-title> 
+  </ion-navbar> 
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+<ion-content padding [style.background-size]="'100% ' + shouldHeight">
+  <h2></h2>
+  <p> 
+  <ion-list>
+
+      <ion-item>
+          <ion-label id = 'ziocode-syntax' floating>Zipcode</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item> 
+
+        <ion-item>
+            <ion-label id = 'distance-syntax' floating>Distance (miles)</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item> 
+    
+    </ion-list>
   </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <button ion-button full (click)="launchResultsPage()">Search</button>
+
+  <div #map id="map"></div>
+
+
+
+  
+
 </ion-content>
